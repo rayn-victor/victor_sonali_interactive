@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+
+body { background: url(../images/bg1.jpg); background-image: cover no-repeat; color: black; font-size: 14px; margin: auto; padding: 40px; max-width: 2460px;}
+
+.buffer { min-height: 100vh }
+
+main { display: flex; flex-direction: column; margin: 0 auto; margin-top: 20px;}
+
+.header { display: flex; width: 100%; justify-content: space-between; flex-direction: column;}
+
+.header p { width: 100%; }
+
+.main-header { font-family: 'Passion One', 'Gill Sans', sans-serif; font-size: 36px; width: 180px; color: white; background-color: black; padding: 20px; height: 160px;}
+
+p { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; }
+
+section { margin-bottom: 100px; color: white; }
+
+section > div:not(.text-wrapper) {
+  width: 30%;
+  padding: 20px;
+  position: relative;
+  display: flex;
+}
+
+.hidden { display: none; }
+
+.svg-graphic { width: 200px; height: 200px;}
+
+.see-more { 
+  display: block; 
+  padding: 12px 18px;  
+  color: white; 
+  background-color: rgb(52, 52, 52); 
+  margin-top: 8px;
+  width: 100px;
+  height: 60px;
+  margin-left: 20px;
+  transition: 1s;
+  cursor: pointer;
+  z-index: 7;
+}
+
+.see-more:hover { background-color: rgba(52, 52, 52, 0.701);  }
+
+p > span { display: block; padding-bottom: 12px; }
+
+.popover { 
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.671);
+  width: 240px;
+  z-index: 1;
+  padding: 4px;
+  margin-left: -260px;
+  margin-top: -100px;
+  padding: 20px;
+}
+
+h4 { font-family: 'Passion One', 'Gill Sans', sans-serif; font-size: 20px; }
+
+.popover p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+
+.show-popover { display: block; }
+
+@media screen and (min-width: 425px) {
+  .header { flex-direction: row;}
+  .header p { width: 50%; }
+}
+
+@media screen and (min-width: 550px) {
+  .popover { 
+    margin-left: 70px;
+    margin-top: -100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  body { background: url(../images/bg3.jpg);}
+  .popover { width: 350px; }
+}
+
+@media screen and (min-width: 960px) {
+  .heROW1, .heROW2 { display: flex; flex-direction: row; justify-content: space-around;}
+  .svg-graphic { width: 150px; height: 150px;}
+  .popover { margin-left: -210px; margin-top: -100px; width: 220px; z-index: 6;}
+}
+
+@media screen and (min-width: 1024px) {
+  .svg-graphic { width: 200px; height: 200px; }
+  .popover { margin-left: -250px; width: 300px; }
+}
+
+@media screen and (min-width: 1440px) {
+  .svg-graphic { width: 300px; height: 300px;}
+  .popover { margin-left: -360px; width: 350px;}
+  .popover p { font-size: 18px; }
+  h4 { font-size: 22px; }
+}
