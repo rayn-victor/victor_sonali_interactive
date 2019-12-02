@@ -66,6 +66,8 @@ h4 { font-family: 'Passion One', 'Gill Sans', sans-serif; font-size: 20px; }
 
 .show-popover { display: block; }
 
+.stats { display: none; }
+
 @media screen and (min-width: 425px) {
   .header { flex-direction: row;}
   .header p { width: 50%; }
@@ -90,12 +92,25 @@ h4 { font-family: 'Passion One', 'Gill Sans', sans-serif; font-size: 20px; }
 
 @media screen and (min-width: 1024px) {
   .svg-graphic { width: 200px; height: 200px; }
-  .popover { margin-left: -250px; width: 300px; }
+  .popover { margin-left: -180px; width: 300px; }
+  .stats { 
+    display: block;
+    width: 200px; 
+    float: right;
+    margin-top: -870px;
+  }
+  .main { flex-direction: row; }
+  .imgTitle { transform: translateY(80px) translateX(35px);}
+  .heROW1, .heROW2 {
+    width: 75%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-  .svg-graphic { width: 300px; height: 300px;}
-  .popover { margin-left: -360px; width: 350px;}
+  .svg-graphic { width: 250px; height: 250px;}
+  .popover { margin-left: -290px; width: 350px;}
   .popover p { font-size: 18px; }
   h4 { font-size: 22px; }
+  .stats { margin-top: -900px; }
+  .imgTitle { transform: translateY(80px) translateX(17px);}
 }

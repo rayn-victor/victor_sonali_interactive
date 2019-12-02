@@ -1,7 +1,8 @@
 (()=> {
-    
+
     const seeMoreButtons = document.querySelectorAll(".see-more"),
         popOver = document.querySelector(".popover");
+        nameCon    = document.querySelector(".name")
 
         // const waypoint1 = new Waypoint({
         //     element: document.getElementById('hero2').querySelector('.svg-graphic'),
@@ -22,12 +23,15 @@
       
     function buildPopover(herofile, el) {
         popOver.querySelector(".name").textContent = `${herofile.hero}`;
+        document.querySelector(".name").textContent = `${herofile.hero}`;
         popOver.querySelector(".alias").textContent = `Alias: ${herofile.title}`;
         popOver.querySelector(".profile").textContent = `Profile: ${herofile.description}`;
+        document.getElementById("statsImage").src = `images/${herofile.stats}`;
+
         //popOver.querySelector(".stats").appendChild(Image);
         //Image.src = 'images/cap-info.svg';
 
-        popOver.classList.toggle("show-popover");
+        popOver.classList.add("show-popover");
         el.appendChild(popOver);
     }
 
